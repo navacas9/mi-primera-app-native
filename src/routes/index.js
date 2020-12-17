@@ -1,6 +1,6 @@
 import React from 'react';
-import { createAppContainer } from "react-navigation";
-import { createStackNavigator } from "react-navigation-stack";
+import { createAppContainer } from 'react-navigation';
+import { createStackNavigator } from 'react-navigation-stack';
 
 import {
     LOADING_PAGE,
@@ -22,6 +22,8 @@ const AppNavigator = createStackNavigator({
     [HOME]: Home,
     [RESULTS]: Results,
     [PROFILE]: Profile
+}, {
+    headerMode: 'none'
 });
 
 export default createAppContainer(AppNavigator);
