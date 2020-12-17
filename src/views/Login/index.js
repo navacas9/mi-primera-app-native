@@ -1,13 +1,19 @@
 import React from 'react';
-import { Container, Content, Text } from 'native-base';
+import { Container, Content, Text, Grid, Button } from 'native-base';
+
+import styles from './style';
 
 export default function Login(){
     return(
         <Container>
-            <Content>
-                <Text>Login page sdas</Text>
-                <Text>Login page sdas</Text>
-                <Text>Login page sdas</Text>
+            <Content contentContainerStyle={styles.content}>
+                <Grid style={styles.grid}>
+                    <Text>Bienvenido</Text>
+                    <Text>Inicia sesión para continuar</Text>
+                    <Button light>
+                        <Text>Cuenta de google</Text>
+                    </Button>
+                </Grid>
             </Content>
         </Container>
     );
