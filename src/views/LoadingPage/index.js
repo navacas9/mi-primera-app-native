@@ -1,11 +1,20 @@
 import React, { useEffect } from 'react';
-import { View, Text } from 'react-native';
+import { Spinner, Container, Content, Grid } from 'native-base';
+
+import { LOGIN } from '../../consts';
+import styles from './style';
 
 export default ({ navigation }) => {
     useEffect(() => {
-        navigation.navigate('Login');
+        navigation.navigate(LOGIN);
     });
     return (
-        <View style={{ marginTop: 24 }}><Text>Loading Page</Text></View>
+        <Container>
+            <Content contentContainerStyle={ styles.content }>
+                <Grid style={styles.grid }>
+                    <Spinner color="red"></Spinner>
+                </Grid>
+            </Content>
+        </Container>
     );
 };
